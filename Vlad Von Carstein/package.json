@@ -1,7 +1,7 @@
 {
   "name": "codes",
   "version": "1.0.0",
-  "description": "bot discord",
+  "description": "Vlad Von Carstein bot discord",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

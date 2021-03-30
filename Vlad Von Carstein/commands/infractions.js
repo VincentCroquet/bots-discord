@@ -10,7 +10,7 @@ module.exports = {
         if (!member) return message.channel.send('Veuillez mentionner le membre dont voir les warns.')
         if (!client.db.warns[member.id]) return message.channel.send('Ce membre n\'a aucun warn.')
         message.channel.send(new Discord.MessageEmbed()
-            .setColor('fcf402')
+            .setColor('ff0000')
             .setDescription(`**Total de warns :** ${client.db.warns[member.id].length}\n\n__**Warns**__\n\n${client.db.warns[member.id].map((warns, i) => `**${i + 1}.** ${warns.reason}\nSanctionné ${moment(warns.date).fromNow()} par <@!${warns.mod}>`).join('\n\n')}`))
     },
     name: 'infractions',

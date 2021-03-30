@@ -51,7 +51,7 @@ client.on('message', message => {
     command.run(message, args, client)
 })
 
-// Quand on créer un nouveau salon, se créer avec le role mute 
+// Quand on créer un nouveau salon, se créer avec le role mute
 client.on('channelCreate', channel => {
     if (!channel.guild) return
     const muteRole = channel.guild.roles.cache.find(role => role.name === 'Muted 🤐')
@@ -73,23 +73,22 @@ client.on('ready', () => {
     }, 6e4)
 
     const statuses = [
-        () => `${client.guilds.cache.size} serveur`,
+        // () => `${client.guilds.cache.size} serveur`,
         () => `${client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, -1)} utilisateurs`,
-        () => `la commande !help`,
-        () => `Night City brûler`
+        () => `la commande !help`
     ]
     let i = 0
     setInterval(() => {
         client.user.setActivity(statuses[i](), { type: 'WATCHING' })
         i = ++i % statuses.length
     }, 1e4)
-    console.log("Samurai opérationnel !");
+    console.log("Vlad Von Carstein se réveille !");
 })
 
 
 // Quand un membre rejoint le serveur
 client.on('guildMemberAdd', member => {
-    member.guild.channels.cache.get(config.greeting.channel).send(`${member} a rejoint le serveur. Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
+    member.guild.channels.cache.get(config.greeting.channel).send(`${member} Un humain est apparue ${member.guild.memberCount} ! 🎉`)
     member.roles.add(config.greeting.roles)
 })
 
@@ -104,7 +103,7 @@ client.on('messageReactionAdd', (reaction, user) => {
     if (!reactionRoleElem) return
     const prop = reaction.emoji.id ? 'id' : 'name'
     const emoji = reactionRoleElem.emojis.find(emoji => emoji[prop] === reaction.emoji[prop])
-    if (emoji.type == "règlement") reaction.message.guild.member(user).roles.add(emoji.roles) && reaction.message.guild.member(user).roles.remove("551395884382945290")
+    if (emoji.type == "règlement") reaction.message.guild.member(user).roles.add(emoji.roles) && reaction.message.guild.member(user).roles.remove('824233886204035133')
     else if (emoji) reaction.message.guild.member(user).roles.add(emoji.roles) && console.log(Date(), `${user.tag} à cliqué sur la réaction ${emoji.type}`)
     else reaction.users.remove(user)
 })

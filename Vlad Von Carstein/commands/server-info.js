@@ -4,7 +4,7 @@ const Discord = require('discord.js'),
 module.exports = {
     run: message => {
         message.channel.send(new Discord.MessageEmbed()
-            .setColor('fcf402')
+            .setColor('ff0000')
             .addField('Nom', message.guild.name, true)
             .addField('Région', message.guild.region, true)
             .addField('Membres', `${message.guild.memberCount} membres\n${message.guild.members.cache.filter(member => !member.user.bot).size} humains\n${message.guild.members.cache.filter(member => member.user.bot).size} bots`, true)

@@ -12,7 +12,7 @@ module.exports = {
         message.channel.send('Ce salon a été verrouillé !')
 
         message.guild.channels.cache.get(config.logs).send(new Discord.MessageEmbed()
-            .setColor('fcf402')
+            .setColor('ff0000')
             .setAuthor(`[UNLOCK] ${channel.name}`)
             .addField('Salon', channel, true)
             .addField('Modérateur', message.author, true))

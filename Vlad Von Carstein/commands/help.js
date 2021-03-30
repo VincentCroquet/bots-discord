@@ -7,12 +7,12 @@ module.exports = {
             const command = client.commands.get(args[0].toLowerCase())
             if (!command || !command.help) return message.channel.send('Cette commande n\'existe pas.')
             message.channel.send(new Discord.MessageEmbed()
-                .setColor('fcf402')
+                .setColor('ff0000')
                 .setDescription(`**Commande :** ${command.name}\n\n${command.help.description}\n\n**Syntaxe :** \`${config.prefix}${command.name}${command.help.syntax ? ` ${command.help.syntax}` : ''}\``))
         }
         else {
             message.channel.send(new Discord.MessageEmbed()
-                .setColor('fcf402')
+                .setColor('ff0000')
                 .setTitle('Liste des commandes :')
                 .setDescription(`${client.commands.filter(command => command.help).map(command => `\`${config.prefix}${command.name}\``).join(' ')}\n\nPour plus d'informations sur une commande, tapez :\n\`${config.prefix}help [nom de la commande (sans le préfix)]\``))
         }

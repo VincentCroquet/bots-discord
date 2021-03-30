@@ -5,7 +5,7 @@ module.exports = {
     run: (message, args, client) => {
         const member = message.mentions.members.first() || message.member
         message.channel.send(new Discord.MessageEmbed()
-            .setColor('fcf402')
+            .setColor('ff0000')
             .addField('Membre', member, true)
             .addField('Tag', member.user.tag, true)
             .addField('Date de création du compte', moment(member.user.createdAt).format('[Le] DD/MM/YYYY [à] HH:mm:ss'), true)

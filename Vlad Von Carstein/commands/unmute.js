@@ -16,7 +16,7 @@ module.exports = {
         message.channel.send(`${member} a été unmute !`)
 
         message.guild.channels.cache.get(config.logs).send(new Discord.MessageEmbed()
-            .setColor('fcf402')
+            .setColor('ff0000')
             .setAuthor(`[UNMUTE] ${member.user.tag}`, member.user.displayAvatarURL())
             .addField('Utilisateur', member, true)
             .addField('Modérateur', message.author, true)
