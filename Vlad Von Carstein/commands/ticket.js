@@ -25,12 +25,12 @@ module.exports = {
         fs.writeFileSync('./db.json', JSON.stringify(client.db))
         channel.send(`Bonjour ${message.member}, bienvenue dans votre ticket. Un Administrateur va venir s'occuper de vous, Merci de patienter. :sunglasses:`)
         message.channel.send(`Votre ticket à été créé avec succès ! Rendez-vous dans ${channel}`)
-        const StaffChannel = client.channels.cache.find(channel => channel.id === "798865668953997322")
-        StaffChannel.send(`<@&798477177732726814> ${message.member} à créer un ticket, réponder à ça requête dans ${channel}`)
+        const StaffChannel = client.channels.cache.find(channel => channel.id === "824226503054196758")
+        StaffChannel.send(`<@&823993819170209802> ${message.member} à créer un ticket, répondez à ça requête dans ${channel}`)
     },
     name: 'ticket',
     help: {
-        description: 'Cette commande permet de créer un ticket (créer un salon spécifique avec le demandeur et les admins pour une requête).\n\n**Rôle requis :** @Membres',
+        description: 'Cette commande permet de créer un ticket (créer un salon spécifique avec le demandeur et les admins pour une requête).\n\n**Rôle requis :** @🦇 Vampire',
         syntax: ""
     },
     guildOnly: true

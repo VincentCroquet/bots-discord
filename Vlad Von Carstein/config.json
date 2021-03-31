@@ -1,5 +1,5 @@
 {
-    "token": "ODI2NDI0NTUwMDY1MzA3Njg5.YGMR1g.XRNUzT0YDkFudxevMKs_PPMvwYA",
+    "token": "",
     "prefix": "!",
     "greeting": {
         "roles": [
@@ -25,9 +25,9 @@
         "": 2e4
     },
     "ticket": {
-        "category": "",
+        "category": "826828154214809621",
         "roles": [
-            ""
+            "823993819170209802"
         ]
     },
     "serverStats": {
@@ -35,5 +35,5 @@
         "bots": "826447543978164246",
         "total": "826447606548267049"
     },
-    "logs": ""
+    "logs": "826446349531873280"
 }
