@@ -13,7 +13,7 @@ module.exports = {
 
         message.guild.channels.cache.get(config.logs).send(new Discord.MessageEmbed()
             .setColor('ff0000')
-            .setAuthor(`[UNLOCK] ${channel.name}`)
+            .setAuthor(`[LOCK] ${channel.name}`)
             .addField('Salon', channel, true)
             .addField('Modérateur', message.author, true))
 
